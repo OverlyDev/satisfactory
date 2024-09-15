@@ -6,6 +6,13 @@ This repo provides an image for running a Satisfactory dedicated server:
 
 The image should rebuild every day at midnight to keep things fresh.
 
+The built image is also signed with `cosign`. This can be seen in the GitHub Action output and the signature can be manually verified via:
+```shell
+COSIGN_EXPERIMENTAL=1 cosign verify ghcr.io/overlydev/satisfactory \
+    --certificate-identity https://github.com/OverlyDev/satisfactory/.github/workflows/docker-publish.yml@refs/heads/main \
+    --certificate-oidc-issuer https://token.actions.githubusercontent.com
+```
+
 ## Usage
 
 To use this container, follow the `run` target in the `Makefile` and adapt to your environment.
