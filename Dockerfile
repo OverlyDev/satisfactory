@@ -7,8 +7,6 @@ LABEL org.opencontainers.image.licenses=MIT
 # Switch to root user for setting things up
 USER root
 
-RUN rm -rf
-
 # Copy in scripts and make executable
 COPY scripts/* /scripts/.
 RUN chmod +x /scripts/*.sh
