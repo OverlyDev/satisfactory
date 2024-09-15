@@ -4,6 +4,8 @@ This repo provides an image for running a Satisfactory dedicated server:
 
 - `ghcr.io/overlydev/satisfactory`
 
+The image should rebuild every day at midnight to keep things fresh.
+
 ## Usage
 
 To use this container, follow the `run` target in the `Makefile` and adapt to your environment.
