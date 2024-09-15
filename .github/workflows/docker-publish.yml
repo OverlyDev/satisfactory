@@ -111,6 +111,7 @@ jobs:
         # against the sigstore community Fulcio instance.
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
 
+      # Source: https://medium.com/ci-cd-devops/keyless-image-signing-with-sigstore-cosign-rekor-gh-action-ghcr-482002a0bd67
       - name: Verify the image
         run: |
           cosign verify ghcr.io/overlydev/satisfactory \
